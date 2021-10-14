@@ -1,0 +1,1069 @@
+2020-09-15 21:58:28,726 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 14320 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 21:58:28,760 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 21:58:28,861 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-15 21:58:28,862 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-15 21:58:31,058 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 21:58:31,228 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 152ms. Found 1 JPA repository interfaces.
+2020-09-15 21:58:32,621 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 21:58:32,645 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 21:58:32,661 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 21:58:32,661 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 21:58:33,487 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 21:58:33,489 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4626 ms
+2020-09-15 21:58:34,712 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-09-15 21:58:36,613 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-09-15 21:58:36,694 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 21:58:36,871 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.17.Final}
+2020-09-15 21:58:36,877 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-09-15 21:58:37,256 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-15 21:58:37,557 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 21:58:39,066 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 21:58:39,204 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 21:58:39,779 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorService': Unsatisfied dependency expressed through field 'factoryDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+2020-09-15 21:58:39,780 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 21:58:39,796 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2020-09-15 21:58:39,834 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2020-09-15 21:58:39,842 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-09-15 21:58:39,876 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-15 21:58:39,941 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorService': Unsatisfied dependency expressed through field 'factoryDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.activity.CurrencyConversionFactorMsApplication.main(CurrencyConversionFactorMsApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorService': Unsatisfied dependency expressed through field 'factoryDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1193)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1193)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1193)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 50 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:84)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:106)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:211)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551)
+	at java.util.Optional.map(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1828)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1765)
+	... 60 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property country found for type CurrencyConverter!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:382)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:358)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:311)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(Unknown Source)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:293)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:276)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:82)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:251)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:252)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:381)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:382)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:97)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:78)
+	... 86 common frames omitted
+2020-09-15 22:03:09,840 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 6312 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 22:03:09,848 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 22:03:09,932 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-15 22:03:09,933 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-15 22:03:12,003 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 22:03:12,128 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 111ms. Found 1 JPA repository interfaces.
+2020-09-15 22:03:13,501 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 22:03:13,527 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 22:03:13,548 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 22:03:13,549 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 22:03:13,996 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 22:03:13,996 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4063 ms
+2020-09-15 22:03:14,971 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-09-15 22:03:16,542 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-09-15 22:03:16,627 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 22:03:16,807 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.17.Final}
+2020-09-15 22:03:16,815 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-09-15 22:03:17,204 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-15 22:03:17,511 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 22:03:18,647 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:03:18,706 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 22:03:19,218 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorService': Unsatisfied dependency expressed through field 'factoryDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+2020-09-15 22:03:19,219 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:03:19,230 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2020-09-15 22:03:19,256 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2020-09-15 22:03:19,261 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-09-15 22:03:19,296 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-15 22:03:19,312 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorService': Unsatisfied dependency expressed through field 'factoryDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.activity.CurrencyConversionFactorMsApplication.main(CurrencyConversionFactorMsApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorService': Unsatisfied dependency expressed through field 'factoryDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1193)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1193)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1193)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 50 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:84)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:106)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:211)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551)
+	at java.util.Optional.map(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1828)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1765)
+	... 60 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property country found for type CurrencyConverter!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:382)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:358)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:311)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(Unknown Source)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:293)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:276)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:82)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:251)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:252)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:381)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:382)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:97)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:78)
+	... 86 common frames omitted
+2020-09-15 22:10:14,304 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 17560 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 22:10:14,313 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 22:10:14,386 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-15 22:10:14,386 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-15 22:10:16,111 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 22:10:16,300 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 173ms. Found 1 JPA repository interfaces.
+2020-09-15 22:10:17,649 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 22:10:17,677 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 22:10:17,707 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 22:10:17,708 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 22:10:18,187 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 22:10:18,188 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3802 ms
+2020-09-15 22:10:19,082 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-09-15 22:10:20,752 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-09-15 22:10:20,848 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 22:10:21,054 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.17.Final}
+2020-09-15 22:10:21,058 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-09-15 22:10:21,454 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-15 22:10:21,779 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 22:10:23,000 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:10:23,056 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 22:10:23,757 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+2020-09-15 22:10:23,758 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:10:23,765 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2020-09-15 22:10:23,783 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2020-09-15 22:10:23,787 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-09-15 22:10:23,812 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-15 22:10:23,837 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.activity.CurrencyConversionFactorMsApplication.main(CurrencyConversionFactorMsApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1193)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:84)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:106)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:211)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551)
+	at java.util.Optional.map(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1828)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1765)
+	... 34 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property country found for type CurrencyConverter!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:382)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:358)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:311)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(Unknown Source)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:293)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:276)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:82)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:251)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:252)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:381)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:382)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:97)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:78)
+	... 60 common frames omitted
+2020-09-15 22:13:26,805 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 11864 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 22:13:26,812 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 22:13:26,919 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-15 22:13:26,920 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-15 22:13:28,727 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 22:13:28,834 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 95ms. Found 1 JPA repository interfaces.
+2020-09-15 22:13:30,130 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 22:13:30,210 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 22:13:30,241 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 22:13:30,241 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 22:13:30,681 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 22:13:30,682 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3761 ms
+2020-09-15 22:13:31,537 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-09-15 22:13:33,266 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-09-15 22:13:33,363 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 22:13:33,595 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.17.Final}
+2020-09-15 22:13:33,599 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-09-15 22:13:33,921 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-15 22:13:34,323 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 22:13:35,462 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:13:35,528 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 22:13:36,024 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+2020-09-15 22:13:36,025 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:13:36,031 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2020-09-15 22:13:36,050 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2020-09-15 22:13:36,054 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-09-15 22:13:36,078 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-15 22:13:36,097 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.activity.CurrencyConversionFactorMsApplication.main(CurrencyConversionFactorMsApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1193)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:84)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:106)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:211)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551)
+	at java.util.Optional.map(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1828)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1765)
+	... 34 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property country found for type CurrencyConverter!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:382)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:358)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:311)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(Unknown Source)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:293)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:276)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:82)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:251)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:252)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:381)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:382)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:97)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:78)
+	... 60 common frames omitted
+2020-09-15 22:17:36,391 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 18860 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 22:17:36,398 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 22:17:36,477 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-15 22:17:36,477 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-15 22:17:38,405 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 22:17:38,507 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 91ms. Found 1 JPA repository interfaces.
+2020-09-15 22:17:39,887 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 22:17:39,919 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 22:17:39,943 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 22:17:39,944 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 22:17:40,506 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 22:17:40,506 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4028 ms
+2020-09-15 22:17:41,349 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-09-15 22:17:42,898 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-09-15 22:17:42,983 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 22:17:43,212 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.17.Final}
+2020-09-15 22:17:43,217 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-09-15 22:17:43,587 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-15 22:17:43,864 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 22:17:44,998 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:17:45,062 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 22:17:45,746 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+2020-09-15 22:17:45,747 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:17:45,753 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2020-09-15 22:17:45,771 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2020-09-15 22:17:45,776 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-09-15 22:17:45,796 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-15 22:17:45,808 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currencyConversionFactorDao': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1402)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.activity.CurrencyConversionFactorMsApplication.main(CurrencyConversionFactorMsApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1193)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:84)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:106)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:211)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551)
+	at java.util.Optional.map(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1828)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1765)
+	... 34 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property country found for type CurrencyConverter!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:382)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:358)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:311)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(Unknown Source)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:293)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:276)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:82)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:251)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:252)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:381)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:382)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:97)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:78)
+	... 60 common frames omitted
+2020-09-15 22:23:03,574 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 19588 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 22:23:03,581 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 22:23:03,692 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-15 22:23:03,693 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-15 22:23:05,969 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 22:23:06,106 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 121ms. Found 1 JPA repository interfaces.
+2020-09-15 22:23:07,339 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 22:23:07,361 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 22:23:07,376 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 22:23:07,376 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 22:23:08,089 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 22:23:08,090 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4396 ms
+2020-09-15 22:23:09,093 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-09-15 22:23:10,742 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-09-15 22:23:10,837 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 22:23:11,052 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.17.Final}
+2020-09-15 22:23:11,060 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-09-15 22:23:11,640 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-15 22:23:11,959 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 22:23:13,263 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:23:13,337 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 22:23:13,736 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-15 22:23:13,827 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-15 22:23:14,692 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+2020-09-15 22:23:14,693 WARN org.springframework.beans.factory.support.DisposableBeanAdapter [restartedMain] Invocation of destroy method failed on bean with name 'tomcatMetricsBinder': java.lang.NullPointerException
+2020-09-15 22:23:14,694 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-15 22:23:14,695 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:23:14,701 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2020-09-15 22:23:14,723 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2020-09-15 22:23:14,728 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-09-15 22:23:14,755 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-09-15 22:23:14,770 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'currencyConvertorRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:514)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:319)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:844)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.activity.CurrencyConversionFactorMsApplication.main(CurrencyConversionFactorMsApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract com.activity.microservice.model.CurrencyConverter com.activity.microservice.repository.CurrencyConvertorRepository.findByCountryAndCurrency(java.lang.String,java.lang.String)! No property country found for type CurrencyConverter!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:84)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:106)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:211)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551)
+	at java.util.Optional.map(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1828)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1765)
+	... 21 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property country found for type CurrencyConverter!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:382)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:358)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:311)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(Unknown Source)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:293)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:276)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:82)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:251)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:252)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:381)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:382)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:97)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:78)
+	... 47 common frames omitted
+2020-09-15 22:25:24,620 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 26320 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 22:25:24,625 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 22:25:24,703 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-15 22:25:24,704 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-15 22:25:26,680 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 22:25:26,809 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 109ms. Found 1 JPA repository interfaces.
+2020-09-15 22:25:28,205 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 22:25:28,240 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 22:25:28,266 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 22:25:28,267 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 22:25:28,696 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 22:25:28,697 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3993 ms
+2020-09-15 22:25:29,509 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-09-15 22:25:30,933 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-09-15 22:25:31,013 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 22:25:31,307 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.17.Final}
+2020-09-15 22:25:31,311 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-09-15 22:25:31,553 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-15 22:25:31,804 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 22:25:32,740 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:25:32,797 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 22:25:33,238 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [restartedMain] HHH000397: Using ASTQueryTranslatorFactory
+2020-09-15 22:25:33,631 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-15 22:25:33,686 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-15 22:25:34,508 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-09-15 22:25:34,566 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2020-09-15 22:25:34,622 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path ''
+2020-09-15 22:25:34,627 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CurrencyConversionFactorMsApplication in 10.606 seconds (JVM running for 13.609)
+2020-09-15 22:33:52,881 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8086-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-15 22:33:52,894 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-09-15 22:33:53,124 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Completed initialization in 228 ms
+2020-09-15 22:33:53,705 INFO com.activity.microservice.controller.CurrencyConversionFactorController [http-nio-8086-exec-2] --- Add conversion factor --- Country code : INDIA, currency : INR, conversio factory : 0.009638
+2020-09-15 22:37:11,764 INFO com.activity.microservice.controller.CurrencyConversionFactorController [http-nio-8086-exec-5] --- Add conversion factor --- Country code : United States, currency : USD, conversio factory : 0.707265
+2020-09-15 22:37:35,554 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(19)-127.0.0.1] Application shutdown requested.
+2020-09-15 22:37:35,602 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(19)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-15 22:37:35,609 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(19)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:37:35,658 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(19)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-09-15 22:37:35,699 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(19)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-09-15 22:48:01,377 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 14056 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 22:48:01,393 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 22:48:01,530 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-15 22:48:01,530 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-15 22:48:03,817 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 22:48:04,014 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 178ms. Found 1 JPA repository interfaces.
+2020-09-15 22:48:06,620 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 22:48:06,656 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 22:48:06,680 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 22:48:06,681 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 22:48:08,053 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 22:48:08,054 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 6524 ms
+2020-09-15 22:48:09,371 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-09-15 22:48:12,137 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-09-15 22:48:12,281 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 22:48:12,698 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.17.Final}
+2020-09-15 22:48:12,701 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-09-15 22:48:13,184 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-15 22:48:13,645 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 22:48:15,989 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:48:16,075 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 22:48:16,716 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [restartedMain] HHH000397: Using ASTQueryTranslatorFactory
+2020-09-15 22:48:17,480 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-15 22:48:17,546 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-15 22:48:18,580 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-09-15 22:48:18,667 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2020-09-15 22:48:18,739 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path ''
+2020-09-15 22:48:18,745 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CurrencyConversionFactorMsApplication in 18.703 seconds (JVM running for 23.195)
+2020-09-15 22:50:13,911 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8086-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-15 22:50:13,912 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-09-15 22:50:13,925 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Completed initialization in 12 ms
+2020-09-15 22:59:23,905 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(22)-127.0.0.1] Application shutdown requested.
+2020-09-15 22:59:23,935 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(22)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-15 22:59:23,940 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(22)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 22:59:23,971 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(22)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-09-15 22:59:24,005 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(22)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-09-15 23:21:58,042 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 22228 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 23:21:58,049 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 23:21:58,133 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-15 23:21:58,134 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-15 23:21:59,903 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 23:22:00,095 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 174ms. Found 1 JPA repository interfaces.
+2020-09-15 23:22:01,608 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 23:22:01,642 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 23:22:01,667 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 23:22:01,669 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 23:22:02,282 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 23:22:02,283 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4147 ms
+2020-09-15 23:22:03,152 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-09-15 23:22:04,951 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-09-15 23:22:05,111 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 23:22:05,444 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.17.Final}
+2020-09-15 23:22:05,447 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-09-15 23:22:05,759 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-15 23:22:06,034 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 23:22:07,620 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 23:22:07,702 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 23:22:08,372 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [restartedMain] HHH000397: Using ASTQueryTranslatorFactory
+2020-09-15 23:22:09,036 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-15 23:22:09,134 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-15 23:22:10,463 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-09-15 23:22:10,694 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2020-09-15 23:22:10,751 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path ''
+2020-09-15 23:22:10,758 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CurrencyConversionFactorMsApplication in 13.366 seconds (JVM running for 16.954)
+2020-09-15 23:23:31,368 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-6] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-15 23:23:31,371 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-6] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 23:23:31,381 INFO com.zaxxer.hikari.HikariDataSource [Thread-6] HikariPool-1 - Shutdown initiated...
+2020-09-15 23:23:31,403 INFO com.zaxxer.hikari.HikariDataSource [Thread-6] HikariPool-1 - Shutdown completed.
+2020-09-15 23:23:32,610 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 22228 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 23:23:32,611 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 23:23:33,407 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 23:23:33,431 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 24ms. Found 1 JPA repository interfaces.
+2020-09-15 23:23:34,025 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 23:23:34,026 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 23:23:34,027 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 23:23:34,027 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 23:23:34,379 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 23:23:34,380 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1767 ms
+2020-09-15 23:23:34,632 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2020-09-15 23:23:34,670 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2020-09-15 23:23:34,689 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 23:23:34,729 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 23:23:34,810 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 23:23:34,832 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 23:23:34,884 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [restartedMain] HHH000397: Using ASTQueryTranslatorFactory
+2020-09-15 23:23:35,074 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-15 23:23:35,085 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-15 23:23:35,445 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-09-15 23:23:35,512 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2020-09-15 23:23:35,522 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path ''
+2020-09-15 23:23:35,529 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CurrencyConversionFactorMsApplication in 2.977 seconds (JVM running for 101.725)
+2020-09-15 23:24:06,378 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8086-exec-10] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-15 23:24:06,379 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-10] Initializing Servlet 'dispatcherServlet'
+2020-09-15 23:24:06,392 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-10] Completed initialization in 12 ms
+2020-09-15 23:26:58,003 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(14)-127.0.0.1] Application shutdown requested.
+2020-09-15 23:26:58,013 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(14)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-15 23:26:58,016 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(14)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 23:26:58,019 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(14)-127.0.0.1] HikariPool-2 - Shutdown initiated...
+2020-09-15 23:26:58,053 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(14)-127.0.0.1] HikariPool-2 - Shutdown completed.
+2020-09-15 23:31:31,950 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 25292 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 23:31:31,954 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 23:31:32,039 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-15 23:31:32,040 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-15 23:31:33,579 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 23:31:33,695 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 101ms. Found 1 JPA repository interfaces.
+2020-09-15 23:31:34,987 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 23:31:35,016 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 23:31:35,033 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 23:31:35,034 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 23:31:35,598 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 23:31:35,599 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3558 ms
+2020-09-15 23:31:36,574 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-09-15 23:31:38,322 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-09-15 23:31:38,432 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 23:31:38,664 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.17.Final}
+2020-09-15 23:31:38,667 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-09-15 23:31:39,071 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-15 23:31:39,433 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 23:31:40,614 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 23:31:40,668 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 23:31:41,075 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [restartedMain] HHH000397: Using ASTQueryTranslatorFactory
+2020-09-15 23:31:41,826 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-15 23:31:41,955 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-15 23:31:42,955 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-09-15 23:31:43,060 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2020-09-15 23:31:43,140 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path ''
+2020-09-15 23:31:43,145 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CurrencyConversionFactorMsApplication in 11.764 seconds (JVM running for 15.324)
+2020-09-15 23:32:02,774 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8086-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-15 23:32:02,775 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-09-15 23:32:02,789 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Completed initialization in 13 ms
+2020-09-15 23:32:02,874 INFO com.activity.microservice.controller.CurrencyConversionFactorController [http-nio-8086-exec-2] Start controller - getCurrencyConversionFactor 
+2020-09-15 23:32:02,875 INFO com.activity.microservice.service.CurrencyConversionFactorService [http-nio-8086-exec-2] Service - getCurrencyConversionFactor 
+2020-09-15 23:32:02,876 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-2] Dao - getCurrencyConversionFactor 
+2020-09-15 23:32:02,973 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-2] Dao - getCurrencyConversionFactor 
+2020-09-15 23:32:28,235 INFO com.activity.microservice.controller.CurrencyConversionFactorController [http-nio-8086-exec-3] Start controller - getCurrencyConversionFactor 
+2020-09-15 23:32:28,236 INFO com.activity.microservice.service.CurrencyConversionFactorService [http-nio-8086-exec-3] Service - getCurrencyConversionFactor 
+2020-09-15 23:32:28,237 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-3] Dao - getCurrencyConversionFactor 
+2020-09-15 23:32:28,243 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-3] Dao - getCurrencyConversionFactor 
+2020-09-15 23:32:43,909 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(8)-127.0.0.1] Application shutdown requested.
+2020-09-15 23:32:43,926 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(8)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-15 23:32:43,928 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(8)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 23:32:43,938 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(8)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-09-15 23:32:43,963 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(8)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-09-15 23:41:04,701 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CurrencyConversionFactorMsApplication on DESKTOP-29N9Q4N with PID 11448 (C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS\target\classes started by RajneeshSoni in C:\rajneesh\SpringTranning\ActWorkspace\CurrencyConversionFactorMS)
+2020-09-15 23:41:04,709 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-09-15 23:41:04,802 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-15 23:41:04,802 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-15 23:41:07,050 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-09-15 23:41:07,236 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 171ms. Found 1 JPA repository interfaces.
+2020-09-15 23:41:11,793 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-09-15 23:41:11,842 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-09-15 23:41:11,866 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-09-15 23:41:11,867 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-15 23:41:12,727 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-09-15 23:41:12,728 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 7925 ms
+2020-09-15 23:41:14,081 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-09-15 23:41:16,894 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-09-15 23:41:17,025 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-15 23:41:17,365 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.17.Final}
+2020-09-15 23:41:17,369 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-09-15 23:41:17,790 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-15 23:41:18,414 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-15 23:41:20,116 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 23:41:20,326 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-09-15 23:41:21,290 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [restartedMain] HHH000397: Using ASTQueryTranslatorFactory
+2020-09-15 23:41:21,926 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-15 23:41:22,003 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-15 23:41:24,330 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-09-15 23:41:25,031 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2020-09-15 23:41:25,316 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path ''
+2020-09-15 23:41:25,322 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CurrencyConversionFactorMsApplication in 21.565 seconds (JVM running for 25.518)
+2020-09-15 23:47:47,819 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-6] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-15 23:47:47,906 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-6] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-15 23:47:48,645 INFO com.zaxxer.hikari.HikariDataSource [Thread-6] HikariPool-1 - Shutdown initiated...
+2020-09-15 23:47:49,339 INFO com.zaxxer.hikari.HikariDataSource [Thread-6] HikariPool-1 - Shutdown completed.

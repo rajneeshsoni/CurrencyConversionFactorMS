@@ -1,0 +1,27 @@
+server:
+  port: 8086
+spring:
+  application:
+      name: managecurrconvfactor
+  sleuth:
+    trace-id128: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411/   
+  datasource:
+    #driverClassName: com.mysql.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/test
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/currency
+    username: root
+    password: 
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true

@@ -1,0 +1,155 @@
+2020-11-20 18:52:49,808 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-20 18:53:01,365 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [restartedMain] Fetching config from server at : http://localhost:8888
+2020-11-20 18:53:04,755 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [restartedMain] Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2020-11-20 18:53:04,758 WARN org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [restartedMain] Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/managecurrconvfactor/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-20 18:53:04,762 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-11-20 18:53:16,005 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-20 18:53:16,616 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 581ms. Found 1 JPA repository interfaces.
+2020-11-20 18:53:20,529 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=47bd685c-5009-31fc-b752-bc47a75b9ca7
+2020-11-20 18:53:30,855 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8086 (http)
+2020-11-20 18:53:30,902 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8086"]
+2020-11-20 18:53:30,905 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-11-20 18:53:30,906 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-11-20 18:53:35,860 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-11-20 18:53:35,863 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 31050 ms
+2020-11-20 18:53:37,711 WARN com.netflix.config.sources.URLConfigurationSource [restartedMain] No URLs will be polled as dynamic configuration sources.
+2020-11-20 18:53:37,719 INFO com.netflix.config.sources.URLConfigurationSource [restartedMain] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-20 18:53:37,952 INFO com.netflix.config.DynamicPropertyFactory [restartedMain] DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@394c469a
+2020-11-20 18:53:38,694 WARN org.springframework.boot.actuate.endpoint.EndpointId [restartedMain] Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-20 18:53:41,508 WARN org.springframework.cloud.sleuth.zipkin2.ZipkinAutoConfiguration [restartedMain] Check result of the [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@76cc77b}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+2020-11-20 18:53:47,442 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-20 18:53:48,652 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-20 18:53:49,012 WARN com.netflix.config.sources.URLConfigurationSource [restartedMain] No URLs will be polled as dynamic configuration sources.
+2020-11-20 18:53:49,013 INFO com.netflix.config.sources.URLConfigurationSource [restartedMain] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-20 18:53:49,236 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-11-20 18:53:50,279 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-20 18:53:52,749 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-20 18:53:54,490 INFO com.zaxxer.hikari.HikariDataSource [task-1] HikariPool-1 - Starting...
+2020-11-20 18:54:01,105 INFO com.zaxxer.hikari.HikariDataSource [task-1] HikariPool-1 - Start completed.
+2020-11-20 18:54:01,414 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-20 18:54:05,181 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-20 18:54:05,209 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 18:54:09,212 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [task-2] LiveReload server is running on port 35729
+2020-11-20 18:54:38,234 WARN org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger [restartedMain] You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-20 18:54:52,226 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-20 18:54:54,462 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [restartedMain] Setting initial instance status as: STARTING
+2020-11-20 18:54:55,215 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Initializing Eureka in region us-east-1
+2020-11-20 18:54:56,762 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using JSON encoding codec LegacyJacksonJson
+2020-11-20 18:54:56,890 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using JSON decoding codec LegacyJacksonJson
+2020-11-20 18:54:59,547 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using XML encoding codec XStreamXml
+2020-11-20 18:54:59,549 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using XML decoding codec XStreamXml
+2020-11-20 18:55:03,271 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [restartedMain] Resolving eureka endpoints via configuration
+2020-11-20 18:55:23,393 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Disable delta property : false
+2020-11-20 18:55:23,397 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Single vip registry refresh property : null
+2020-11-20 18:55:23,399 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Force full registry fetch : false
+2020-11-20 18:55:23,400 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application is null : false
+2020-11-20 18:55:23,402 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Registered Applications size is zero : true
+2020-11-20 18:55:23,403 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application version is -1: true
+2020-11-20 18:55:23,404 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Getting all instance registry info from the eureka server
+2020-11-20 18:55:27,306 INFO com.netflix.discovery.DiscoveryClient [restartedMain] The response status is 200
+2020-11-20 18:55:27,311 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Starting heartbeat executor: renew interval is: 30
+2020-11-20 18:55:27,318 INFO com.netflix.discovery.InstanceInfoReplicator [restartedMain] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-11-20 18:55:27,365 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Discovery Client initialized at timestamp 1605878727342 with initial instances count: 0
+2020-11-20 18:55:27,473 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [restartedMain] Registering application MANAGECURRCONVFACTOR with eureka with status UP
+2020-11-20 18:55:27,476 INFO com.netflix.discovery.DiscoveryClient$3 [restartedMain] Saw local status change event StatusChangeEvent [timestamp=1605878727476, current=UP, previous=STARTING]
+2020-11-20 18:55:27,482 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8086"]
+2020-11-20 18:55:27,482 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_MANAGECURRCONVFACTOR/DESKTOP-29N9Q4N:managecurrconvfactor:8086: registering service...
+2020-11-20 18:55:27,647 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8086 (http) with context path ''
+2020-11-20 18:55:27,649 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [restartedMain] Updating port to 8086
+2020-11-20 18:55:27,884 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_MANAGECURRCONVFACTOR/DESKTOP-29N9Q4N:managecurrconvfactor:8086 - registration status: 204
+2020-11-20 18:55:50,654 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Triggering deferred initialization of Spring Data repositories…
+2020-11-20 18:55:54,187 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Spring Data repositories initialized!
+2020-11-20 18:55:54,850 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CurrencyConversionFactorMsApplication in 197.951 seconds (JVM running for 221.739)
+2020-11-20 18:55:57,462 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Disable delta property : false
+2020-11-20 18:55:57,468 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Single vip registry refresh property : null
+2020-11-20 18:55:57,473 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Force full registry fetch : false
+2020-11-20 18:55:57,477 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Application is null : false
+2020-11-20 18:55:57,478 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Registered Applications size is zero : true
+2020-11-20 18:55:57,478 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Application version is -1: false
+2020-11-20 18:55:57,478 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Getting all instance registry info from the eureka server
+2020-11-20 18:55:58,164 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] The response status is 200
+2020-11-20 18:58:51,116 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8086-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-20 18:58:51,459 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-11-20 18:58:53,251 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-1] Completed initialization in 1787 ms
+2020-11-20 18:58:56,023 INFO com.activity.microservice.controller.CurrencyConversionFactorController [http-nio-8086-exec-1] Start controller - getCurrencyConversionFactor 
+2020-11-20 18:58:56,424 INFO com.activity.microservice.service.CurrencyConversionFactorService [http-nio-8086-exec-1] Service - getCurrencyConversionFactor 
+2020-11-20 18:58:56,426 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-1] Dao - getCurrencyConversionFactor 
+2020-11-20 18:58:58,455 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-1] Dao - getCurrencyConversionFactor 
+2020-11-20 18:59:00,677 WARN zipkin2.reporter.AsyncReporter$BoundedAsyncReporter [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@76cc77b}] Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2020-11-20 18:59:00,701 WARN zipkin2.reporter.AsyncReporter$BoundedAsyncReporter [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@76cc77b}] Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748)
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132)
+	at zipkin2.Call$Base.execute(Call.java:380)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:285)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:354)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:739)
+	... 9 common frames omitted
+2020-11-20 19:00:23,708 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-11-20 19:01:51,527 INFO com.activity.microservice.controller.CurrencyConversionFactorController [http-nio-8086-exec-5] Start controller - getCurrencyConversionFactor 
+2020-11-20 19:01:51,529 INFO com.activity.microservice.service.CurrencyConversionFactorService [http-nio-8086-exec-5] Service - getCurrencyConversionFactor 
+2020-11-20 19:01:51,531 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-5] Dao - getCurrencyConversionFactor 
+2020-11-20 19:01:51,551 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-5] Dao - getCurrencyConversionFactor 
+2020-11-20 19:03:02,838 INFO com.activity.microservice.controller.CurrencyConversionFactorController [http-nio-8086-exec-6] Start controller - getCurrencyConversionFactor 
+2020-11-20 19:03:02,841 INFO com.activity.microservice.service.CurrencyConversionFactorService [http-nio-8086-exec-6] Service - getCurrencyConversionFactor 
+2020-11-20 19:03:02,842 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-6] Dao - getCurrencyConversionFactor 
+2020-11-20 19:03:02,912 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-6] Dao - getCurrencyConversionFactor 
+2020-11-20 19:05:23,731 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-11-20 19:10:23,744 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-11-20 19:15:23,761 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-11-20 19:20:23,778 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-11-20 19:25:23,799 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-11-20 19:30:23,815 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-11-20 19:35:20,155 INFO com.activity.microservice.controller.CurrencyConversionFactorController [http-nio-8086-exec-10] Start controller - getCurrencyConversionFactor 
+2020-11-20 19:35:20,194 INFO com.activity.microservice.service.CurrencyConversionFactorService [http-nio-8086-exec-10] Service - getCurrencyConversionFactor 
+2020-11-20 19:35:20,198 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-10] Dao - getCurrencyConversionFactor 
+2020-11-20 19:35:20,646 INFO com.activity.microservice.dao.CurrencyConversionFactorDao [http-nio-8086-exec-10] Dao - getCurrencyConversionFactor 
+2020-11-20 19:35:23,862 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-11-20 19:35:40,225 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(55)-127.0.0.1] Application shutdown requested.
+2020-11-20 19:35:40,299 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [RMI TCP Connection(55)-127.0.0.1] Unregistering application MANAGECURRCONVFACTOR with eureka with status DOWN
+2020-11-20 19:35:40,306 WARN com.netflix.discovery.DiscoveryClient$3 [RMI TCP Connection(55)-127.0.0.1] Saw local status change event StatusChangeEvent [timestamp=1605881140304, current=DOWN, previous=UP]
+2020-11-20 19:35:40,315 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_MANAGECURRCONVFACTOR/DESKTOP-29N9Q4N:managecurrconvfactor:8086: registering service...
+2020-11-20 19:35:40,391 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_MANAGECURRCONVFACTOR/DESKTOP-29N9Q4N:managecurrconvfactor:8086 - registration status: 204
+2020-11-20 19:35:40,581 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(55)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8086"]
+2020-11-20 19:35:43,247 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(55)-127.0.0.1] Stopping service [Tomcat]
+2020-11-20 19:35:43,282 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(55)-127.0.0.1] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-11-20 19:35:43,530 WARN org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(55)-127.0.0.1] The web application [ROOT] appears to have started a thread named [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@76cc77b}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ zipkin2.reporter.ByteBoundedQueue.drainTo(ByteBoundedQueue.java:81)
+ zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:256)
+ zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:354)
+ java.lang.Thread.run(Unknown Source)
+2020-11-20 19:35:43,545 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(55)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8086"]
+2020-11-20 19:35:43,620 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(55)-127.0.0.1] Destroying ProtocolHandler ["http-nio-8086"]
+2020-11-20 19:35:43,777 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(55)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-20 19:35:43,859 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(55)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-20 19:35:44,432 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(55)-127.0.0.1] Shutting down DiscoveryClient ...

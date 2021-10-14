@@ -1,0 +1,651 @@
+2020-09-18 16:34:50,568 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8086-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-18 16:34:50,569 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-09-18 16:34:50,676 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8086-exec-2] Completed initialization in 106 ms
+2020-09-18 16:34:50,916 INFO com.activity.microservice.controller.CurrencyConversionFactorController [http-nio-8086-exec-2] As per our discussion in today's session, I'm sharing the requested details:
+Service Now API Environment details for reading the incidents (Prod URL): https://nationalgrid.service-now.com/api/now/table/incident
+Service Now API Environment details for updating the incidents (Prod URL): https://nationalgrid.service-now.com/api/now/table/u_imp_incident
+Error while updating the incident: The remote server returned an error: (400) Bad Request.
+
+Error while reading the incident: The remote server returned an error: (407) Proxy Authentication Required.
+
+Fileds we are updating in the incident: We are only updating the following fields in the incident:
+
+Assigned To (u_assigned_to)
+Description (u_description)
+Correlation ID (u_correlation_display = Winauto Ticket)
+Work Notes (u_work_notes)
+Sample incident in which we got this error: INC7632643
+
+Observations:
+When we update any incident and in that, if the description field is having "new lines, tabular format data, break between the lines, and if it contains any substring between quotations ("substring")", we are getting the above-mentioned issue (The remote server returned an error: (400) Bad Request).
+Request Body while updating the incident:
+
+{
+"u_number":"%Incident_Number%",
+"u_impact":"%Impact%",
+"u_urgency":"%Urgency%",
+"u_caller":"%Caller_ID%",
+"u_customer":"%Customer%",
+"u_location":"%Location%",
+"u_short_description":"%Short_Description%",
+"u_business_service":"",
+"u_category":"%Category%",
+"u_subcategory":"%Sub_Category%",
+"u_description":"%Description%",
+"u_configuration_item":"%Configuration_Item%",
+"u_assignment_group":"%Assignment_Group%",
+"u_assigned_to":"%Assigned_To%",
+"u_affected_region":"%Affected_Region%",
+"u_contact_type":"%Contact_Type%",
+"u_resolution_code":"",
+"u_closed_note":"",
+"u_resolved":"",
+"u_state":"%Update_State%",
+"u_additional_comments":"",
+"u_correlation_display":"Winauto Ticket",
+"u_work_notes":"%Work_Notes%",
+"u_comments":""
+}
+Please let us know if you need any further details on the same and keep us posted on your findings.
+
+• Name of user Robert Van Benthuysen
+• Phone number 7323098263
+• Current location Staten Island Gulf Ave 5220
+• Computer name
+• The error the user is getting - "there are currently no logon servers available to service the logon request"
+• What were the events running up to this happening?
+• Did they unplug their network cable? Y
+• Had they installed software? N
+• Are they working on Zscaler or VPN RSA?
+• If they installed Zscaler, was this when they were last in the office, or over the VPN?
+• When did the user last change their password?
+What method was the password changed with? was it user change, service desk change, or self-service portal change? User change
+2020-09-18 16:34:52,335 WARN zipkin2.reporter.AsyncReporter$BoundedAsyncReporter [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@21121f54}] Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2020-09-18 16:34:52,341 WARN zipkin2.reporter.AsyncReporter$BoundedAsyncReporter [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@21121f54}] Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748)
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132)
+	at zipkin2.Call$Base.execute(Call.java:380)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:285)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:354)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:739)
+	... 9 common frames omitted
+2020-09-18 16:37:58,843 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 16:42:58,855 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 16:47:58,861 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 16:52:58,865 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 16:57:58,879 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:02:58,914 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:07:58,916 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:12:58,931 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:17:58,944 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:22:58,955 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:27:58,990 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:32:59,012 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:37:59,039 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:42:59,051 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:47:59,060 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:52:59,091 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 17:57:59,105 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 18:02:59,121 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 18:07:59,125 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 18:12:59,140 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 18:17:59,144 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 18:22:59,161 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 18:27:59,168 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-09-18 18:31:14,657 ERROR com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient [DiscoveryClient-HeartbeatExecutor-0] Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:864)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1423)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 26 common frames omitted
+2020-09-18 18:31:14,674 WARN com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient [DiscoveryClient-HeartbeatExecutor-0] Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-09-18 18:31:14,691 ERROR com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient [DiscoveryClient-CacheRefreshExecutor-0] Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getDelta(AbstractJerseyEurekaHttpClient.java:170)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1103)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:985)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1497)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1464)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 29 common frames omitted
+2020-09-18 18:31:14,694 WARN com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient [DiscoveryClient-CacheRefreshExecutor-0] Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-09-18 18:31:19,095 ERROR com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient [DiscoveryClient-CacheRefreshExecutor-0] Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getDelta(AbstractJerseyEurekaHttpClient.java:170)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1103)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:985)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1497)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1464)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 30 common frames omitted
+2020-09-18 18:31:19,100 WARN com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient [DiscoveryClient-CacheRefreshExecutor-0] Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-09-18 18:31:19,115 ERROR com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] DiscoveryClient_MANAGECURRCONVFACTOR/localhost:managecurrconvfactor:8086 - was unable to refresh its cache! status = Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1103)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:985)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1497)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1464)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-09-18 18:31:19,233 ERROR com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient [DiscoveryClient-HeartbeatExecutor-0] Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:864)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1423)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 27 common frames omitted
+2020-09-18 18:31:19,237 WARN com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient [DiscoveryClient-HeartbeatExecutor-0] Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-09-18 18:31:19,239 ERROR com.netflix.discovery.DiscoveryClient [DiscoveryClient-HeartbeatExecutor-0] DiscoveryClient_MANAGECURRCONVFACTOR/localhost:managecurrconvfactor:8086 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:864)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1423)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-09-18 18:31:23,145 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(149)-127.0.0.1] Application shutdown requested.
+2020-09-18 18:31:23,260 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [RMI TCP Connection(149)-127.0.0.1] Unregistering application MANAGECURRCONVFACTOR with eureka with status DOWN
+2020-09-18 18:31:23,296 WARN com.netflix.discovery.DiscoveryClient$3 [RMI TCP Connection(149)-127.0.0.1] Saw local status change event StatusChangeEvent [timestamp=1600434083296, current=DOWN, previous=UP]
+2020-09-18 18:31:23,302 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_MANAGECURRCONVFACTOR/localhost:managecurrconvfactor:8086: registering service...
+2020-09-18 18:31:23,617 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(149)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8086"]
+2020-09-18 18:31:26,069 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(149)-127.0.0.1] Stopping service [Tomcat]
+2020-09-18 18:31:26,110 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(149)-127.0.0.1] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-09-18 18:31:26,221 WARN org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(149)-127.0.0.1] The web application [ROOT] appears to have started a thread named [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@21121f54}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ zipkin2.reporter.ByteBoundedQueue.drainTo(ByteBoundedQueue.java:81)
+ zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:256)
+ zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:354)
+ java.lang.Thread.run(Unknown Source)
+2020-09-18 18:31:26,235 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(149)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8086"]
+2020-09-18 18:31:26,294 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(149)-127.0.0.1] Destroying ProtocolHandler ["http-nio-8086"]
+2020-09-18 18:31:26,590 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(149)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-18 18:31:26,920 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(149)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-18 18:31:27,791 ERROR com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient [DiscoveryClient-InstanceInfoReplicator-0] Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 30 common frames omitted
+2020-09-18 18:31:27,795 WARN com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient [DiscoveryClient-InstanceInfoReplicator-0] Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-09-18 18:31:27,796 WARN com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_MANAGECURRCONVFACTOR/localhost:managecurrconvfactor:8086 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-09-18 18:31:27,800 WARN com.netflix.discovery.InstanceInfoReplicator [DiscoveryClient-InstanceInfoReplicator-0] There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-09-18 18:31:28,045 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(149)-127.0.0.1] Shutting down DiscoveryClient ...
+2020-09-18 18:31:31,213 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(149)-127.0.0.1] Unregistering ...
+2020-09-18 18:31:36,093 ERROR com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient [RMI TCP Connection(149)-127.0.0.1] Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:941)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:919)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:579)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:551)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:512)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:168)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor69.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source)
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(Unknown Source)
+	at com.sun.jmx.mbeanserver.PerInterface.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.MBeanSupport.invoke(Unknown Source)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at sun.rmi.transport.Transport$1.run(Unknown Source)
+	at sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 84 common frames omitted
+2020-09-18 18:31:36,100 WARN com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient [RMI TCP Connection(149)-127.0.0.1] Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2020-09-18 18:31:36,102 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(149)-127.0.0.1] DiscoveryClient_MANAGECURRCONVFACTOR/localhost:managecurrconvfactor:8086 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:941)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:919)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:579)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:551)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:512)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:168)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor69.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source)
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(Unknown Source)
+	at com.sun.jmx.mbeanserver.PerInterface.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.MBeanSupport.invoke(Unknown Source)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(Unknown Source)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at sun.rmi.transport.Transport$1.run(Unknown Source)
+	at sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-09-18 18:31:36,175 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(149)-127.0.0.1] Completed shut down of DiscoveryClient
+2020-09-18 18:31:36,180 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(149)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-09-18 18:31:36,326 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(149)-127.0.0.1] HikariPool-1 - Shutdown completed.
